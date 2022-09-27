@@ -266,5 +266,7 @@ namespace RazerKeyboardRecoloring
                 }
             }
         }
+
+        private void recolorKeyboard_MouseDown(object sender, MouseEventArgs e) => RecolorKeyboard_Click(sender, e);
     }
 }

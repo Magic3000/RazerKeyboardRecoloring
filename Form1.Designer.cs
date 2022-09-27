@@ -31,6 +31,7 @@ namespace RazerKeyboardRecoloring
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lmbColorBtn = new System.Windows.Forms.Button();
             this.rmbColorBtn = new System.Windows.Forms.Button();
             this.mmbColorBtn = new System.Windows.Forms.Button();
@@ -120,7 +121,7 @@ namespace RazerKeyboardRecoloring
             this.recolorKeyboard.TabIndex = 2;
             this.recolorKeyboard.Text = "Recolor keyboard";
             this.recolorKeyboard.UseVisualStyleBackColor = true;
-            this.recolorKeyboard.MouseDown += RecolorKeyboard_Click;
+            this.recolorKeyboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.recolorKeyboard_MouseDown);
             // 
             // Form1
             // 
@@ -134,8 +135,9 @@ namespace RazerKeyboardRecoloring
             this.Controls.Add(this.mmbColorBtn);
             this.Controls.Add(this.mb4ColorBtn);
             this.Controls.Add(this.mb5ColorBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Name = "RazerKeyboardRecoloring";
+            this.Name = "Form1";
             this.Text = "RazerKeyboardRecoloring";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
